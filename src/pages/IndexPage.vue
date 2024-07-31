@@ -40,6 +40,14 @@
       />
       <q-input
         filled
+        v-model="Pet"
+        label="Enter your pet"
+        hint="Pet"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'Please type something']"
+      />
+      <q-input
+        filled
         type="number"
         v-model="age"
         label="Your age *"
@@ -73,6 +81,7 @@ export default {
     const Surname = ref("เชียววรรณา")
     const ID = ref("6604101378")
     const University = ref("Maejo University")
+    const Pet = ref("Meao")
     const age = ref(null)
     const accept = ref(false)
 
