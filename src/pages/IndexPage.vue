@@ -16,6 +16,14 @@
       />
       <q-input
         filled
+        v-model="languge"
+        label="ภาษา"
+        hint="ภาษา"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'Please type something']"
+      />
+      <q-input
+        filled
         v-model="Surname"
         label="Surname"
         hint="Surname"
@@ -113,6 +121,7 @@ export default {
         name.value = null
         age.value = null
         accept.value = false
+        languge.vslue =null
       }
     }
   }
